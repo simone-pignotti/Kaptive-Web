@@ -6,14 +6,16 @@ RUN apt-get update && apt-get install -y \
   imagemagick \
   curl \
   build-essential \
+  procps \
   && curl -L https://github.com/web2py/web2py/archive/2.18.4.tar.gz \
   | tar xz --strip-components=1 \
   && mkdir applications/kaptive \
+  && mkdir applications/kaptive/queue \
   && mkdir applications/kaptive-CLI \
   && cd applications/kaptive-CLI \
   && curl -L https://github.com/katholt/Kaptive/archive/0.7.0.tar.gz \
   | tar xz --strip-components=1 \
-  && mv kaptive.py reference_database ../kaptive/
+  && cp -r kaptive.py reference_database ../kaptive/
 
 COPY . applications/kaptive
 
