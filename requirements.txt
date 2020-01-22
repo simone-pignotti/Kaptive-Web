@@ -1,0 +1,7 @@
+BioPython
+lxml
+pillow
+pydal
+pygal
+reportlab
+yatl

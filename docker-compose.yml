@@ -1,0 +1,7 @@
+version: '3'
+services:
+  kaptive:
+    build: .
+    image: kaptive:latest
+    ports:
+      - "8000:8000"
